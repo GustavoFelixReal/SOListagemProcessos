@@ -54,7 +54,7 @@ public class KillController {
 
 	public void killProcessByName(String name) {
 		String os = os();
-		String process = os.contains("Windows") ? "TASKKILL /IM " + name : "kill -f " + name;
+		String process = os.contains("Windows") ? "TASKKILL /IM " + name : "pkill -f " + name;
 
 		callProcess(process);
 	}
